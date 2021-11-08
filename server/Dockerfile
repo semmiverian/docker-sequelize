@@ -10,9 +10,10 @@ RUN npm install -g nodemon
 
 RUN chown -R node:node .
 
-# RUN rm /bin/sh && ln -s /bin/bash /bin/sh
-
 RUN apk add --no-cache bash
+
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
 
 USER node
 
